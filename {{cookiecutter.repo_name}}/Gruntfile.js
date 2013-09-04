@@ -47,15 +47,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// CoffeeScript compilation
-		coffee: {
-			compile: {
-				files: {
-					"dist/jquery.{{ cookiecutter.repo_name }}.js": "src/jquery.{{ cookiecutter.repo_name }}.coffee"
-				}
-			}
-		},
-
     // CSS minification
     cssmin: {
       add_banner: {
@@ -73,7 +64,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-concat");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
-	grunt.loadNpmTasks("grunt-contrib-coffee");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
 
 	grunt.registerTask("default", ["jshint", "concat", "uglify", "cssmin"]);
