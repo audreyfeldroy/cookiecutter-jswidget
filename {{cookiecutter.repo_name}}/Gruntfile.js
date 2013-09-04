@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		// Import package manifest
-		pkg: grunt.file.readJSON("{{ cookiecutter.repo_name }}.jquery.json"),
+		pkg: grunt.file.readJSON("package.json"),
 
 		// Banner definitions
 		meta: {
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				" *  <%= pkg.description %>\n" +
 				" *  <%= pkg.homepage %>\n" +
 				" *\n" +
-				" *  Made by <%= pkg.author.name %>\n" +
+				" *  Made by <%= pkg.author %>\n" +
 				" *  Under <%= pkg.licenses[0].type %> License\n" +
 				" */\n"
 		},
@@ -20,8 +20,8 @@ module.exports = function(grunt) {
 		// Concat definitions
 		concat: {
 			dist: {
-				src: ["src/jquery.{{ cookiecutter.repo_name }}.js"],
-				dest: "dist/jquery.{{ cookiecutter.repo_name }}.js"
+				src: ["src/{{ cookiecutter.repo_name }}.js"],
+				dest: "dist/{{ cookiecutter.repo_name }}.js"
 			},
 			options: {
 				banner: "<%= meta.banner %>"
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 
 		// Lint definitions
 		jshint: {
-			files: ["src/jquery.{{ cookiecutter.repo_name }}.js"],
+			files: ["src/{{ cookiecutter.repo_name }}.js"],
 			options: {
 				jshintrc: ".jshintrc"
 			}
@@ -39,8 +39,8 @@ module.exports = function(grunt) {
 		// Minify definitions
 		uglify: {
 			my_target: {
-				src: ["dist/jquery.{{ cookiecutter.repo_name }}.js"],
-				dest: "dist/jquery.{{ cookiecutter.repo_name }}.min.js"
+				src: ["dist/{{ cookiecutter.repo_name }}.js"],
+				dest: "dist/{{ cookiecutter.repo_name }}.min.js"
 			},
 			options: {
 				banner: "<%= meta.banner %>"
