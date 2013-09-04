@@ -1,0 +1,17 @@
+{
+  "name": "{{ cookiecutter.repo_name }}",
+  "repo": "{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}",
+  "description": "{{ cookiecutter.description }}",
+  "version": "{{ cookiecutter.version }}",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "{{ cookiecutter.license }}",
+  "main": "dist/{{ cookiecutter.repo_name }}.js",
+  "scripts": [
+    "dist/{{ cookiecutter.repo_name }}.js"
+  ],
+  "styles": [
+    "dist/{{ cookiecutter.repo_name }}.css"
+  ]
+}
