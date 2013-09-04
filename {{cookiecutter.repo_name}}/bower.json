@@ -1,0 +1,20 @@
+{
+  "name": "{{ cookiecutter.repo_name }}",
+  "version": "{{ cookiecutter.version }}",
+  "main": [
+    "dist/{{ cookiecutter.repo_name }}.css",
+    "dist/{{ cookiecutter.repo_name }}.js",
+  ],
+  "ignore": [
+    ".DS_Store",
+    ".git",
+    ".gitignore",
+    ".npmignore",
+    ".travis.yml",
+    "component.json",
+    "node_modules",
+    "package.json",
+    "src",
+    "demo"
+  ]
+}
