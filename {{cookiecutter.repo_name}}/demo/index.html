@@ -2,15 +2,15 @@
 <html>
 	<head>
 		<title>{{ cookiecutter.project_name }}</title>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		<script src="../dist/jquery.{{ cookiecutter.repo_name }}.js"></script>
+    <link href="../dist/{{ cookiecutter.repo_name }}.min.css" rel="stylesheet">
 	</head>
 	<body>
+    <h1>{{ cookiecutter.project_name }} Demo</h1>
+		<script src="../dist/{{ cookiecutter.repo_name }}.min.js"></script>
 		<script>
-			$(function() {
-				$("#element").{{ cookiecutter.pluginName }}({
-					propertyName: "a custom value"
-				});
+			var element = document.querySelector("#element");
+			var {{ cookiecutter.className }} = new {{ cookiecutter.className }}(element, {
+				propertyName: "a custom value"
 			});
 		</script>
 	</body>
