@@ -63,14 +63,26 @@ module.exports = function(grunt) {
       }
     }
 
+    // Start up server on 8080 and open demo
+    connect: {
+      server: {
+        options: {
+          keepalive: true,
+          open: "http://127.0.0.1:8080/demo/index.html",
+          port: 8080
+        }
+      }
+    }
+
   });
 
   grunt.loadNpmTasks("grunt-contrib-jshint");
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
+  grunt.loadNpmTasks("grunt-contrib-connect");
 
-  grunt.registerTask("default", ["jshint", "concat", "uglify", "cssmin"]);
+  grunt.registerTask("default", ["jshint", "concat", "uglify", "cssmin", "connect"]);
   grunt.registerTask("travis", ["jshint"]);
 
 };
