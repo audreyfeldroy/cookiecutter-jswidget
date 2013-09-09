@@ -17,22 +17,19 @@ module.exports = function(grunt) {
         " */\n"
     },
 
-    // Concat definitions
-    concat: {
-      dist: {
-        src: ["src/{{ cookiecutter.repo_name }}.js"],
-        dest: "dist/{{ cookiecutter.repo_name }}.js"
-      },
-      options: {
-        banner: "<%= meta.banner %>"
-      }
-    },
-
     // Lint definitions
     jshint: {
       files: ["src/{{ cookiecutter.repo_name }}.js"],
       options: {
         jshintrc: ".jshintrc"
+      }
+    },
+
+    // Copy definitions
+    copy: {
+      dist: {
+        src: "src/timeline.js",
+        dest: "dist/timeline.js"
       }
     },
 
@@ -61,12 +58,12 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
 
-  grunt.registerTask("default", ["jshint", "concat", "uglify", "cssmin"]);
+  grunt.registerTask("default", ["jshint", "copy", "uglify", "cssmin"]);
   grunt.registerTask("travis", ["jshint"]);
 
 };
