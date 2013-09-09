@@ -25,18 +25,21 @@ module.exports = function(grunt) {
       }
     },
 
-    // Copy definitions
-    copy: {
+    // Concat definitions
+    concat: {
       dist: {
-        src: "src/timeline.js",
-        dest: "dist/timeline.js"
+        src: "src/{{ cookiecutter.repo_name }}.js",
+        dest: "dist/{{ cookiecutter.repo_name }}.js"
+      },
+      options: {
+        banner: "<%= meta.banner %>"
       }
     },
 
     // Minify definitions
     uglify: {
-      my_target: {
-        src: ["dist/{{ cookiecutter.repo_name }}.js"],
+      dist: {
+        src: "dist/{{ cookiecutter.repo_name }}.js",
         dest: "dist/{{ cookiecutter.repo_name }}.min.js"
       },
       options: {
@@ -59,11 +62,11 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks("grunt-contrib-jshint");
-  grunt.loadNpmTasks("grunt-contrib-copy");
+  grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
 
-  grunt.registerTask("default", ["jshint", "copy", "uglify", "cssmin"]);
+  grunt.registerTask("default", ["jshint", "concat", "uglify", "cssmin"]);
   grunt.registerTask("travis", ["jshint"]);
 
 };
