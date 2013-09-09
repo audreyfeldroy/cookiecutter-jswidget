@@ -20,6 +20,10 @@
       "url": "http://www.opensource.org/licenses/mit-license.php"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git"
+  },
 	"scripts": {
 		"test": "grunt travis --verbose"
 	}
