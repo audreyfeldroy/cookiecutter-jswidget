@@ -27,9 +27,13 @@ module.exports = function(grunt) {
 
     // Concat definitions
     concat: {
-      dist: {
+      dist_js: {
         src: "src/{{ cookiecutter.repo_name }}.js",
         dest: "dist/{{ cookiecutter.repo_name }}.js"
+      },
+      dist_css: {
+        src: "src/{{ cookiecutter.repo_name }}.css",
+        dest: "dist/{{ cookiecutter.repo_name }}.css"
       },
       options: {
         banner: "<%= meta.banner %>"
@@ -54,7 +58,7 @@ module.exports = function(grunt) {
           banner: '/* {{ cookiecutter.repo_name }} by {{ cookiecutter.github_username }} ~ https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }} */'
         },
         files: {
-          'dist/jquery.{{ cookiecutter.repo_name }}.min.css': ['src/{{ cookiecutter.repo_name }}.css']
+          'dist/{{ cookiecutter.repo_name }}.min.css': ['src/{{ cookiecutter.repo_name }}.css']
         }
       }
     }
