@@ -6,9 +6,11 @@
 	</head>
 	<body>
     <h1>{{ cookiecutter.project_name }} Demo</h1>
+    <div id="my-{{ cookiecutter.repo_name }}" class="{{ cookiecutter.repo_name }}"></div>
+    
 		<script src="../dist/{{ cookiecutter.repo_name }}.min.js"></script>
 		<script>
-			var element = document.querySelector("#element");
+			var element = document.querySelector("#my-{{ cookiecutter.repo_name }}");
 			var {{ cookiecutter.className }} = new {{ cookiecutter.className }}(element, {
 				propertyName: "a custom value"
 			});

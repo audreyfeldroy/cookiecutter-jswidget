@@ -1,0 +1,12 @@
+/**
+ * Styles for {{ cookiecutter.repo_name }} element
+ */
+
+.{{ cookiecutter.repo_name }} {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Description of another style goes here
+ */
