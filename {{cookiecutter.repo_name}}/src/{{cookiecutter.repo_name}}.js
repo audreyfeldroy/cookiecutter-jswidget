@@ -17,7 +17,8 @@
     				propertyName: "value"
     		};
 
-		function {{ cookiecutter.className }} ( element, options ) {
+		function {{ cookiecutter.className }} ( element_selector, options ) {
+        var element = document.querySelector(element_selector);
 				this.element = element;
 				this.settings = extend( {}, defaults, options );
 				this._defaults = defaults;
