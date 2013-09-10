@@ -8,26 +8,38 @@
 
 ## Demo
 
-TODO
+Live demo: http://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.repo_name }}/demo/.
+
+To try out the demo locally:
+
+1. Make sure you have NPM and Grunt installed.
+2. Set up {{ cookiecutter.project_name }} and run it:
+
+  ```bash
+  git clone https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
+  cd {{ cookiecutter.repo_name }}/
+  npm install
+  grunt
+  ```
 
 ## Usage
 
-1. Include jQuery:
+1. Include dependencies:
 
 	```html
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="TODO"></script>
 	```
 
 2. Include plugin's code:
 
 	```html
-	<script src="dist/jquery.{{ cookiecutter.repo_name }}.min.js"></script>
+	<script src="{{ cookiecutter.repo_name }}.min.js"></script>
 	```
 
 3. Call the plugin:
 
 	```javascript
-	$("#element").{{ cookiecutter.defaultPluginName }}({
+	var {{ cookiecutter.className }} = new {{ cookiecutter.className }}("#my-{{ cookiecutter.repo_name }}", {
 		propertyName: "a custom value"
 	});
 	```
