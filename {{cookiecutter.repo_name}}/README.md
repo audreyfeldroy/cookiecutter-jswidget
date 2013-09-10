@@ -53,3 +53,7 @@ To try out the demo locally:
 * [Zeno Rocha](http://zenorocha.com) and [Addy Osmani](http://addyosmani.com) for creating [jquery-boilerplate](https://github.com/jquery-boilerplate/jquery-boilerplate).
 * [Audrey Roy](http://www.audreymroy.com) for creating [cookiecutter-jquery](https://github.com/audreyr/cookiecutter-jquery).
 
+
+### Sites Using This Widget
+
+* None listed yet. Why not be the first?
