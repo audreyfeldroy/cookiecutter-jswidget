@@ -44,11 +44,11 @@
     window.{{ cookiecutter.pluginName }} = function (element, options) {
 
       // Get the actual DOM element obj, so we can modify it
-      var {{ cookiecutter.pluginName }}_element = document.querySelector(element);
-      if ({{ cookiecutter.pluginName }}_element) {
+      var {{ cookiecutter.pluginName }}Element = document.querySelector(element);
+      if ({{ cookiecutter.pluginName }}Element) {
         if (typeof {{ cookiecutter.pluginName }}_element["plugin_" + {{ cookiecutter.pluginName }}] === "undefined") {
           // Associate the actual DOM element obj with a new {{ cookiecutter.className }} obj
-          {{ cookiecutter.pluginName }}_element["plugin_" + {{ cookiecutter.pluginName }}] = new {{ cookiecutter.className }}(element, options);
+          {{ cookiecutter.pluginName }}Element["plugin_" + {{ cookiecutter.pluginName }}] = new {{ cookiecutter.className }}(element, options);
         }
       }
       return this;
