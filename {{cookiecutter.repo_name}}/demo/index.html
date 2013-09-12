@@ -10,7 +10,7 @@
     
 		<script src="../dist/{{ cookiecutter.repo_name }}.min.js"></script>
 		<script>
-			var {{ cookiecutter.className }} = new {{ cookiecutter.className }}("#my-{{ cookiecutter.repo_name }}", {
+			window.{{ cookiecutter.pluginName }}("#my-{{ cookiecutter.repo_name }}", {
 				propertyName: "a custom value"
 			});
 		</script>

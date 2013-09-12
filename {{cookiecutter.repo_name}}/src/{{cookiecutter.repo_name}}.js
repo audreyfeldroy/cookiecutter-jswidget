@@ -35,8 +35,6 @@
 				}
 		};
 
-    this.{{ cookiecutter.className }} = {{ cookiecutter.className }};
-
     // Wrapper to allow for multiple instantiations in a single page
     // HACK: This is similar to http://git.io/o8TOIA, but non-jQuery
     //  and adds a property to window. I'm not 100% sure is alright to add to

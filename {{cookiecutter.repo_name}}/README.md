@@ -39,7 +39,7 @@ To try out the demo locally:
 3. Call the plugin:
 
 	```javascript
-	var {{ cookiecutter.className }} = new {{ cookiecutter.className }}("#my-{{ cookiecutter.repo_name }}", {
+	window.{{ cookiecutter.pluginName }}("#my-{{ cookiecutter.repo_name }}", {
 		propertyName: "a custom value"
 	});
 	```
