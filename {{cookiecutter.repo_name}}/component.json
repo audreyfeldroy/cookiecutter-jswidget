@@ -6,7 +6,7 @@
   "keywords": [],
   "dependencies": {},
   "development": {},
-  "license": "{{ cookiecutter.license }}",
+  "license": "{{ cookiecutter.project_license }}",
   "main": "dist/{{ cookiecutter.repo_name }}.js",
   "scripts": [
     "dist/{{ cookiecutter.repo_name }}.js"
