@@ -6,6 +6,7 @@
   "project_name": "jQuery Boilerplate",
   "project_short_description": "A jump-start for jQuery plugins development.",
   "release_date": "2013-08-14",
+  "project_license": "MIT",
   "year": "2013",
   "version": "0.1.0",
   "pluginName": "boilerPlate",
